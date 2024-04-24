@@ -1,3 +1,4 @@
+
 let conteoAves=0;
 function diezAves (numeroMisterio) {
     for (let i=0;i<10;i++){
@@ -7,7 +8,7 @@ function diezAves (numeroMisterio) {
         Dios te salve Maria, llena eres de gracia, el Señor es contigo. Bendita eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús. `+`
         Santa Maria, madre de Dios, ruega por nosotros pecadores, ahora, y en la hora de nuestra muerte, amén.
         
-        Peticiones: `+usuarioActual.peticion);
+        Peticiones: `);
         if (!continuar) {
             alert("Has decidido no continuar con el rosario.");
             conteoAves = 0; // Resetea el conteo de aves
@@ -18,4 +19,4 @@ function diezAves (numeroMisterio) {
     conteoAves=0;
     return true; 
 }
-diezAves();
+diezAves(3);

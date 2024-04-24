@@ -202,6 +202,7 @@ function Gloria (numeroMisterio){
 //lectura misterios
 let NumeroMisterio = 0;
 
+
 function lecturaMisterios (){
 
     switch (misterio) {
