@@ -162,8 +162,8 @@ function diezAves (numeroMisterio) {
         Dios te salve Maria, llena eres de gracia, el Señor es contigo. Bendita eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús. `+`
         Santa Maria, madre de Dios, ruega por nosotros pecadores, ahora, y en la hora de nuestra muerte, amén.
         
-        Peticiones: `);
-        // +usuarioActual.peticion
+        Peticiones: `+usuarioActual.peticion);
+        
         if (!continuar) {
             alert("Has decidido no continuar con el rosario.");
             conteoAves = 0; // Resetea el conteo de aves
