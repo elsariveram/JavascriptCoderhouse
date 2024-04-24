@@ -20,4 +20,4 @@ function diezAves (numeroMisterio) {
     // alert(numeroMisterio+"hola")
     return true; 
 }
-diezAves(3);
+diezAves(1);
