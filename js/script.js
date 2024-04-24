@@ -211,9 +211,9 @@ function lecturaMisterios (){
              NumeroMisterio=1; // 1 es 1er misterio, 2 es 2do misterio, 3 es 3er misterio, 4 es 4to misterio, 5 es 5to misterio
             switch (NumeroMisterio) {
                 case 1 : alert("1. Primer Misterio gozoso 😍: La Anunciación del Arcangel Gabriel a la Virgen María. ")
-                        // PadreNuestro(NumeroMisterio);
+                        PadreNuestro(NumeroMisterio);
                         let continuarRezando = diezAves(NumeroMisterio); 
-                          if (!continuarRezando) {
+                          if (continuarRezando===false) {
                                                   break;  
                                                   }
                         Gloria(NumeroMisterio);
