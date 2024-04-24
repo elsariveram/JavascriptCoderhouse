@@ -67,17 +67,47 @@ else{
      //Pedir dia
      let dia;
 
-     function PedirDia() {
-        while (true) {
+    //  function PedirDia() {
+    //     while (true) {
+    //         dia = prompt("Introduce el nombre del día de hoy (ejemplo: lunes)");
+    //         if (dia === null) {
+    //             return null;  // Maneja la cancelación inmediatamente.
+    //         } else if (dia.trim() === "") {
+    //             continue;  // Continúa si la entrada es solo espacios.
+    //         }
+            
+    //         break;
+    //     }
+    // }
+    function PedirDia() {
+        let diaValido = false;
+        while (!diaValido) {
             dia = prompt("Introduce el nombre del día de hoy (ejemplo: lunes)");
             if (dia === null) {
-                return null;  // Maneja la cancelación inmediatamente.
-            } else if (dia.trim() === "") {
-                continue;  // Continúa si la entrada es solo espacios.
+                alert("Operación cancelada por el usuario");
+                console.log("Operación cancelada por el usuario");
+                return; // Salir de la función si el usuario cancela
             }
+            // Convertir el día a minúsculas para realizar comparaciones sin importar el formato de entrada
             dia = dia.toLowerCase();
             dia = dia.trim();
-            break;
+            // Verificar si el día ingresado es válido
+            switch (dia) {
+                case 'lunes':
+                case 'sábado':
+                case 'sabado':
+                case 'martes':
+                case 'viernes':
+                case 'miércoles':
+                case 'miercoles':
+                case 'domingo':
+                case 'jueves':
+                    diaValido = true;
+                    break;
+                default:
+                    alert("El día ingresado no es válido. Por favor, intenta nuevamente.");
+                    break;
+            }
         }
     }
     
@@ -121,11 +151,13 @@ else{
                         alert("No se reconoce el día ingresado.");
                         misterio="indefinido";
                         break;
+                        
+                        
                 }
             }
             
          DefinirMisterio();  
-         console.log(misterio)
+
         }
     
         ////////////////////////////
