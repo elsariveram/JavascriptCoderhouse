@@ -67,18 +67,6 @@ else{
      //Pedir dia
      let dia;
 
-    //  function PedirDia() {
-    //     while (true) {
-    //         dia = prompt("Introduce el nombre del día de hoy (ejemplo: lunes)");
-    //         if (dia === null) {
-    //             return null;  // Maneja la cancelación inmediatamente.
-    //         } else if (dia.trim() === "") {
-    //             continue;  // Continúa si la entrada es solo espacios.
-    //         }
-            
-    //         break;
-    //     }
-    // }
     function PedirDia() {
         let diaValido = false;
         while (!diaValido) {
@@ -86,9 +74,9 @@ else{
             if (dia === null) {
                 alert("Operación cancelada por el usuario");
                 console.log("Operación cancelada por el usuario");
-                return; // Salir de la función si el usuario cancela
+                return; 
             }
-            // Convertir el día a minúsculas para realizar comparaciones sin importar el formato de entrada
+            // Convertir el día a minúsculas y quitar espacios
             dia = dia.toLowerCase();
             dia = dia.trim();
             // Verificar si el día ingresado es válido
@@ -114,8 +102,7 @@ else{
     
      PedirDia();
 
-                            //  let textoEnMinusculas = dia.toLowerCase();
-                            //  dia= textoEnMinusculas;
+                            
      let misterio;
 
      if (dia===null){
@@ -225,10 +212,10 @@ function lecturaMisterios (){
             switch (NumeroMisterio) {
                 case 1 : alert("1. Primer Misterio gozoso 😍: La Anunciación del Arcangel Gabriel a la Virgen María. ")
                         PadreNuestro(NumeroMisterio);
-                        let continuarRezando = diezAves(NumeroMisterio); 
-                          if (!continuarRezando) {
-                                                  break;  
-                                                  }
+                        // let continuarRezando = diezAves(NumeroMisterio); 
+                        //   if (!continuarRezando) {
+                        //                           break;  
+                        //                           }
                         Gloria(NumeroMisterio);
                 case 2 : alert("2. Segundo Misterio gozoso 😍:La Visitación de María a su prima Isabel")
                         NumeroMisterio = 2;
