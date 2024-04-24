@@ -76,6 +76,7 @@ else{
                 continue;  // Continúa si la entrada es solo espacios.
             }
             dia = dia.toLowerCase();
+            dia = dia.trim();
             break;
         }
     }
@@ -155,8 +156,9 @@ function diezAves (numeroMisterio) {
 }
 
 //Padre nuestro
+ 
 function PadreNuestro(numeroMisterio) {
-    alert(numeroMisterio + " misterio\n\n" +
+   alert(numeroMisterio + " misterio\n\n" +
         "Padre nuestro:\n" +
         "Padre nuestro que estás en los cielos,\n" +
         "Santificado sea tu Nombre,\n" +
