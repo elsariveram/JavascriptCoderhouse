@@ -155,21 +155,22 @@ function diezAves (numeroMisterio) {
 }
 
 //Padre nuestro
-function PadreNuestro (numeroMisterio){
-    alert(numeroMisterio+" misterio"+`
-    `+`
-                Padre nuestro:
-    Padre nuestro que estás en los cielos,
-    Santificado sea tu Nombre,
-    Venga tu reino,
-    Hágase tu voluntad
-    En la tierra como en el cielo.
-    Danos hoy el pan nuestro de cada día.
-    Perdona nuestras ofensas,
-    Como también nosotros perdonamos a los que nos ofenden.
-    No nos dejes caer en la tentación,
-    Y líbranos del mal. Amen.`)
+function PadreNuestro(numeroMisterio) {
+    alert(numeroMisterio + " misterio\n\n" +
+        "Padre nuestro:\n" +
+        "Padre nuestro que estás en los cielos,\n" +
+        "Santificado sea tu Nombre,\n" +
+        "Venga tu reino,\n" +
+        "Hágase tu voluntad\n" +
+        "En la tierra como en el cielo.\n" +
+        "Danos hoy el pan nuestro de cada día.\n" +
+        "Perdona nuestras ofensas,\n" +
+        "Como también nosotros perdonamos a los que nos ofenden.\n" +
+        "No nos dejes caer en la tentación,\n" +
+        "Y líbranos del mal.\n\nAmen."
+    );
 }
+
 //Gloria
 function Gloria (numeroMisterio){
     alert(numeroMisterio+" misterio"+`
