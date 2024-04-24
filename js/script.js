@@ -125,7 +125,8 @@ else{
                         alert(usuarioActual.nombre + " hoy corresponden los misterios Dolorosos 😢");
                         misterio="dolorosos";
                         break;
-                    case 'miercoles':
+                    case 'miercoles': 
+                    case 'miércoles':
                     case 'domingo':
                         alert(usuarioActual.nombre + " hoy corresponden los misterios Gloriosos 😇");
                         misterio="gloriosos";
