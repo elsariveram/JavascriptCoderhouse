@@ -156,7 +156,6 @@ else{
 //conteo aves.
 let conteoAves=0;
 function diezAves (numeroMisterio) {
-    
     for (let i=0;i<10;i++){
         conteoAves++;
         let continuar= confirm(numeroMisterio+" misterio"+`
@@ -208,9 +207,6 @@ let NumeroMisterio = 0;
 
 function lecturaMisterios (){
 
-   
-   
-   
     switch (misterio) {
 
 
@@ -219,7 +215,6 @@ function lecturaMisterios (){
             switch (NumeroMisterio) {
                 case 1 : alert("1. Primer Misterio gozoso 😍: La Anunciación del Arcangel Gabriel a la Virgen María. ")
                         PadreNuestro(NumeroMisterio);
-                        // diezAves(NumeroMisterio);
                         let continuarRezando = diezAves(NumeroMisterio); 
                         //   if (!continuarRezando) {
                         //                           break;  
