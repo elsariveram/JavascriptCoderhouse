@@ -154,27 +154,27 @@ else{
 
 
 //conteo aves.
-let conteoAves=0;
-function diezAves (numeroMisterio) {
-    for (let i=0;i<10;i++){
-        conteoAves++;
-        let continuar= confirm(numeroMisterio+" misterio"+`
-                              `+conteoAves+` Cuenta: `+`
-        Dios te salve Maria, llena eres de gracia, el Señor es contigo. Bendita eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús. `+`
+
+function diezAves(numeroMisterio) {
+    let conteoAves = 0; // Mueve la variable dentro de la función para evitar interferencias externas.
+    for (let i = 0; i < 10; i++) {
+        let mensaje = numeroMisterio + " misterio" + `
+                      ` + (conteoAves + 1) + ` Cuenta: ` + `
+        Dios te salve Maria, llena eres de gracia, el Señor es contigo. Bendita eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús. ` + `
         Santa Maria, madre de Dios, ruega por nosotros pecadores, ahora, y en la hora de nuestra muerte, amén.
         
-        Peticiones: `+usuarioActual.peticion);
-        
+        Peticiones: ` + usuarioActual.peticion;
+
+        let continuar = confirm(mensaje);
         if (!continuar) {
             alert("Has decidido no continuar con el rosario.");
-            conteoAves = 0; // Resetea el conteo de aves
-            return false; // Sale de la función diezAves
+            return false; // Sale de la función diezAves y termina el bucle
         }
-         
+        conteoAves++;
     }
-    conteoAves=0;
-    return true; 
+    return true; // Indica que el usuario completó las diez Aves María sin interrupción.
 }
+
 
 //Padre nuestro
  
@@ -215,11 +215,10 @@ function lecturaMisterios (){
             switch (NumeroMisterio) {
                 case 1 : alert("1. Primer Misterio gozoso 😍: La Anunciación del Arcangel Gabriel a la Virgen María. ")
                         PadreNuestro(NumeroMisterio);
-                        diezAves(NumeroMisterio);
-                        // let continuarRezando = diezAves(NumeroMisterio); 
-                        //   if (!continuarRezando) {
-                        //                           break;  
-                        //                           }
+                        let continuarRezando = diezAves(NumeroMisterio); 
+                          if (!continuarRezando) {
+                                                  break;  
+                                                  }
                         Gloria(NumeroMisterio);
                 case 2 : alert("2. Segundo Misterio gozoso 😍:La Visitación de María a su prima Isabel")
                         NumeroMisterio = 2;
