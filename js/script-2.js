@@ -31,17 +31,14 @@
             let numeroMisterio = 1;
             let contadorUnidadesAvesMisterio = 1;
             let contadorUnidadesAvesGlobal = 1;
-            
-            function leerAve() {
-                let mensaje = `${numeroMisterio}° misterio:\n${contadorUnidadesAvesMisterio} cuenta:\n"Dios te salve, Maria, llena eres de GRACIA, el SEÑOR es contigo, BENDITA eres entre todas las mujeres y BENDITO es el fruto de tu vientre, Jesús".\nSanta Maria, MADRE de Dios, RUEGA por nosotros pecadores, AHORA y en la hora de nuestra MUERTE, \namén".\nAceptar= siguiente     Cancelar= atrás`;
-                return confirm(mensaje);
-            }
+            let diapositivaActual = 0;
+            const diapositivas = document.querySelectorAll('.diapositiva');
             
             function actualizarContadores(avanzar) {
                 if (avanzar) {
                     contadorUnidadesAvesMisterio++;
                     contadorUnidadesAvesGlobal++;
-
+            
                     if (contadorUnidadesAvesGlobal % 10 === 1 && contadorUnidadesAvesGlobal > 1) {
                         numeroMisterio++;
                         contadorUnidadesAvesMisterio = 1;
@@ -58,14 +55,29 @@
                         }
                     } 
                 }
+                document.getElementById('misterio').textContent = `Misterio ${numeroMisterio}`;
+                document.getElementById('cuenta').textContent = `Cuenta ${contadorUnidadesAvesMisterio}`;
             }
             
-            do {
-                let avanzar = leerAve();
-                if (!avanzar && contadorUnidadesAvesGlobal === 1) {
-                    alert("Operacion cancelada.")
-                    break; // Salir  si el usuario selecciona Cancelar en el primer confirm.
-                }
-                actualizarContadores(avanzar);
-            } while (contadorUnidadesAvesGlobal >= 1 && contadorUnidadesAvesGlobal <= 50);
+            function diapositivaSiguiente() {
+                diapositivaActual = (diapositivaActual + 1) % diapositivas.length;
+                mostrarDiapositiva(diapositivaActual);
+                actualizarContadores(true);
+            }
+            
+            function diapositivaAnterior() {
+                diapositivaActual = (diapositivaActual - 1 + diapositivas.length) % diapositivas.length;
+                mostrarDiapositiva(diapositivaActual);
+                actualizarContadores(false);
+            }
+            
+            function mostrarDiapositiva(indiceDiapositiva) {
+                diapositivas.forEach((diapositiva, indice) => {
+                    if (indice === indiceDiapositiva) {
+                        diapositiva.classList.add('activa');
+                    } else {
+                        diapositiva.classList.remove('activa');
+                    }
+                });
+            }
             
