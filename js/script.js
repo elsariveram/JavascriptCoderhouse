@@ -64,7 +64,7 @@ formulario.addEventListener('submit', function(event) {
      
 
      //Pedir dia
-     let dia; // Declaración de la variable dia fuera de cualquier función
+     let dia; // Declaración de la variable dia 
 
 function DefinirDia() {
     const diasSemana = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
